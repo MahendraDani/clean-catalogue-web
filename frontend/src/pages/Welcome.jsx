@@ -26,6 +26,8 @@ const Welcome = () => {
         authID: user.id,
         profileImage: user.imageUrl,
       });
+      localStorage.setItem("name", user.name);
+      localStorage.setItem("email", user.primaryEmailAddress.emailAddresser);
       // console.log(response);
     } catch (error) {
       console.log(error.response);

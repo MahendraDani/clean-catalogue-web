@@ -12,7 +12,7 @@ const Result = () => {
   const getCatalogueDetails = async () => {
     const id = window.location.pathname.split("/result/")[1];
     const response = await axios.get(
-      `http://localhost:3001/catalogue/vision/${id}`
+      `${import.meta.env.VITE_BASE_API}/catalogue/vision/${id}`
     );
     console.log(response.data);
     setCatalogueResult(response.data);
